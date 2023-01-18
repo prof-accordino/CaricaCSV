@@ -23,7 +23,7 @@ public class MainClass {
     	ArrayList<String> righe = new ArrayList<String>();
     	
         // Istanzio un oggetto della classe File
-    	File f = new File("path/to/file.csv");
+    	File f = new File(percorsoFile);
 
     	// Scanner può leggere anche dai file, lo creiamo ma per ora non lo inizializziamo 
         Scanner fileScanner;
