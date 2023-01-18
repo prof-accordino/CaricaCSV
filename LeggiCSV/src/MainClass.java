@@ -12,11 +12,13 @@ public class MainClass
 		// TODO Auto-generated method stub
     	ArrayList<String> righeTabellaDocente = leggiFile("INSERIRE PRECORSO");
     	
-    		for(String riga : righeTabellaDocente)
-    		{
-    			String[] colonne = riga.split(",");
-    			System.out.println("Trovato prof. " + colonne[0] + " " + colonne[1]);
-			listaDocente.add(new Docente(colonna[2],colonna[1],colonna[3]);
+		for(String riga : righeTabellaDocente)
+		{
+			// Il -1 serve per acquisire anche gli elementi senza valore come stringhe vuote
+			// Se non lo usassi sballerebbe l'ordine delle colonne dato che mancano valori
+			String[] colonne = riga.split(",", -1);
+			System.out.println("Trovato prof. " + colonne[1] + " " + colonne[2]);
+			listaDocente.add(new Docente(colonne[1],colonne[2],colonne[3]));
 		}
     
 	}
