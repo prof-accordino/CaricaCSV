@@ -3,17 +3,20 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MainClass {
+public class MainClass 
+{
+    	static ArrayList<Docente> listaDocente = new ArrayList<Docente>();
 
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
     	ArrayList<String> righeTabellaDocente = leggiFile("INSERIRE PRECORSO");
     	
-    	for(String riga : righeTabellaDocente)
-    	{
-    		String[] colonne = riga.split(",");
-    		System.out.println("Trovato prof. " + colonne[0] + " " + colonne[1]);
+    		for(String riga : righeTabellaDocente)
+    		{
+    			String[] colonne = riga.split(",");
+    			System.out.println("Trovato prof. " + colonne[0] + " " + colonne[1]);
+			listaDocente.add(new Docente(colonna[2],colonna[1],colonna[3]);
 		}
     
 	}
